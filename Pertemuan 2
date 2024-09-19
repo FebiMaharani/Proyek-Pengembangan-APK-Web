@@ -2,12 +2,20 @@ Konsep Analisis Kebutuhan
 
 1. Analisis Kebutuhan dari Sisi Pengguna (User)
 a. Fungsionalitas 
+    - Melihat informasi umum tentang sekolah
+    - Menyampaikan umpan balik atau pertanyaan
 b. Antarmuka Pengguna (User Interface)
+    - Akses yang jelas ke berbagai informasi
+    - Antarmuka yang sederhana
+    - Fisual yang menarik
 c. Kinerja
+    - Responsif di perangkap mobile dan desktop
 d. Keamanan
+    - Akses terbatas untuk infomasi sensitive
 
 2. Analisis Kebutuhan dari Sisi Administrator (Admin)
 a. Pengelolaan Data
+    - 
 b. Laporan 
 c. Pengembangan dan Pemeliharaan 
 
