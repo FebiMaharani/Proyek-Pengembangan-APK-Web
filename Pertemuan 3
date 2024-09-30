@@ -1,2 +1,36 @@
-Buat Design IO
-Link Drive : https://docs.google.com/document/d/1X_V8XVZC1s6tzklnERd47czSk4M-2sTDrKGUHLi2fzM/edit?usp=drive_link
+// Merancang Database
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table siswa {
+  nis integer [primary key]
+  nsiswa varchar
+  sjekel varchar
+  tingkat varchar
+  id_rombel integer
+  id_guru integer 
+}
+
+Table pengguna {
+  id integer [primary key]
+  username varchar
+  password varchar
+  akses varchar
+}
+
+Table rombel {
+  id_rombel integer [primary key]
+  nama_rombel varchar
+  tingkat varchar
+}
+
+Table guru {
+  id_guru integer [primary key]
+  nama_guru varchar
+  gjekel varchar
+  status varchar
+}
+
+Ref: rombel.id_rombel > siswa.id_rombel 
+
+Ref: guru.id_guru < siswa.id_guru
