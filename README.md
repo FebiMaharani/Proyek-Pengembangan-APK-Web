@@ -40,6 +40,6 @@ Output:
 ![Screenshot 2024-09-30 225631](https://github.com/user-attachments/assets/4253ac28-122c-402c-bc34-55787673edbf)
 
 # Output User :
-![image](https://github.com/user-attachments/assets/1fd18d18-f604-4034-9e81-be3a0875105d)
+![image](https://github.com/user-attachments/assets/1fd18d18-f604-4034-9e81-be3a0875105d) 
 
 
