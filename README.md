@@ -10,26 +10,26 @@ Konsep Analisis Kebutuhan
 # Rancangan Input/Output
 1.User
 Input:
-Permintaan untuk melihat profil sekolah
-Permintaan untuk mengakses informasi sekolah (visi, misi, sejarah)
-Permintaan untuk melihat dokumentasi kegiatan
-Permintaan untuk mengakses informasi kontak sekolah
+- Permintaan untuk melihat profil sekolah
+- Permintaan untuk mengakses informasi sekolah (visi, misi, sejarah)
+- Permintaan untuk melihat dokumentasi kegiatan
+- Permintaan untuk mengakses informasi kontak sekolah
 
 Output
-Tampilan profil sekolah
-Informasi sekolah (visi, misi, sejarah)
-Dokumentasi kegiatan (gambar, video, deskripsi)
-Informasi kontak sekolah (alamat, nomor telepon, email)
+- Tampilan profil sekolah
+- Informasi sekolah (visi, misi, sejarah)
+- Dokumentasi kegiatan (gambar, video, deskripsi)
+- Informasi kontak sekolah (alamat, nomor telepon, email)
 
 2.Admin
 Input:
-Menambah, mengedit, dan menghapus data siswa
-Mengatur tampilan yang dapat dilihat oleh pengunjung
-Mengelola kategori informasi yang ditampilkan
-Mengatur pengumuman dan informasi penting
+- Menambah, mengedit, dan menghapus data siswa
+- Mengatur tampilan yang dapat dilihat oleh pengunjung
+- Mengelola kategori informasi yang ditampilkan
+- Mengatur pengumuman dan informasi penting
 
 Output:
-Konfirmasi penambahan, pengeditan, atau penghapusan data siswa
-Tampilan yang diatur sesuai dengan preferensi admin
-Kategori informasi yang diperbarui
-Pengumuman dan informasi penting yang ditampilkan kepada pengguna
+- Konfirmasi penambahan, pengeditan, atau penghapusan data siswa
+- Tampilan yang diatur sesuai dengan preferensi admin
+- Kategori informasi yang diperbarui
+- Pengumuman dan informasi penting yang ditampilkan kepada pengguna
