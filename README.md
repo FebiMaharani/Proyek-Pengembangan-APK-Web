@@ -16,7 +16,7 @@ Input:
 - Permintaan untuk melihat dokumentasi kegiatan
 - Permintaan untuk mengakses informasi kontak sekolah
 
-Output
+Output:
 - Tampilan profil sekolah
 - Informasi sekolah (visi, misi, sejarah)
 - Dokumentasi kegiatan (gambar, video, deskripsi)
