@@ -35,3 +35,10 @@ Output:
 - Tampilan yang diatur sesuai dengan preferensi admin
 - Kategori informasi yang diperbarui
 - Pengumuman dan informasi penting yang ditampilkan kepada pengguna
+
+# Input/Output Admin
+![Screenshot 2024-09-30 225631](https://github.com/user-attachments/assets/4253ac28-122c-402c-bc34-55787673edbf)
+
+# Output User
+![User (1)](https://github.com/user-attachments/assets/726b4dd9-495f-49e1-8c9f-d207ccd68cd5)
+
