@@ -1,4 +1,4 @@
-# Judul proyek :  
+# Judul proyek   
 Sistem Informasi Pendataan Siswa SDN Pamanukan Sebrang I 
 
 # Proyek-Pengembangan-APK-Web
