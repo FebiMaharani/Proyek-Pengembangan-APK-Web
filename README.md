@@ -12,7 +12,7 @@ Konsep Analisis Kebutuhan
 # Tabel database
 ![image](https://github.com/user-attachments/assets/f9e8be13-dade-4c17-a69b-b641d887381d)
 
-# Tabel siswa
+# Tabel data siswa
 ![WhatsApp Image 2024-10-08 at 01 36 10_d37c8efa](https://github.com/user-attachments/assets/fefb6662-105a-4bb2-88d9-9e0a91cbf08c)
 
 
