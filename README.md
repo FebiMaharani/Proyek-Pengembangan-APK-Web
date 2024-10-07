@@ -1,5 +1,5 @@
 # Judul proyek :  
-Sistem Informasi Pendataan Siswa SDN Pamanukan Sebrang I
+Sistem Informasi Pendataan Siswa SDN Pamanukan Sebrang I 
 
 # Proyek-Pengembangan-APK-Web
 Konsep Analisis Kebutuhan 
