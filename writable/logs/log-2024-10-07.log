@@ -1,0 +1,441 @@
+CRITICAL - 2024-10-07 14:36:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 14:36:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 17:56:33 --> ErrorException: Cannot declare class App\Models\SiswaModel, because the name is already in use
+[Method: GET, Route: siswa]
+in APPPATH\Models\SiswaModel.php on line 27.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2024-10-07 17:58:27 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: YES) in C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', '', '', 'sispendat', 3306, '', 0)
+#1 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`....', Array, false)
+#4 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\sispendat\app\Models\SiswaModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\sispendat\app\Controllers\SiswaController.php(12): App\Models\SiswaModel->getSiswa()
+#8 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+#9 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+#10 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\sispendat\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: YES) in C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`....', Array, false)
+#3 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\sispendat\app\Models\SiswaModel.php(18): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\sispendat\app\Controllers\SiswaController.php(12): App\Models\SiswaModel->getSiswa()
+#7 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+#8 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+#9 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\sispendat\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-07 17:58:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: YES)
+[Method: GET, Route: siswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `guru`.`nama` as `nama_guru`, `rombel`.`nama` as `nama_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\SiswaModel.php(18): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\SiswaController.php(12): App\Models\SiswaModel->getSiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-07 18:01:09 --> mysqli_sql_exception: Unknown column 'guru.nama' in 'field list' in C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `siswa`....', 0)
+#1 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`....')
+#2 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`....')
+#3 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`....', Array, false)
+#4 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\sispendat\app\Models\SiswaModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\sispendat\app\Controllers\SiswaController.php(12): App\Models\SiswaModel->getSiswa()
+#8 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+#9 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+#10 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\sispendat\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-10-07 18:01:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'guru.nama' in 'field list'
+[Method: GET, Route: siswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `guru`.`nama` as `nama_guru`, `rombel`.`nama` as `nama_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SiswaModel.php(18): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\SiswaController.php(12): App\Models\SiswaModel->getSiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 18:01:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'guru.nama' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`.*, `guru`.`nama` as `nama_guru`, `rombel`.`nama` as `nama_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`.*, `guru`.`nama` as `nama_guru`, `rombel`.`nama` as `nama_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `guru`.`nama` as `nama_guru`, `rombel`.`nama` as `nama_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SiswaModel.php(18): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\SiswaController.php(12): App\Models\SiswaModel->getSiswa()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 18:01:09 --> [Caused by] mysqli_sql_exception: Unknown column 'guru.nama' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `siswa`.*, `guru`.`nama` as `nama_guru`, `rombel`.`nama` as `nama_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`.*, `guru`.`nama` as `nama_guru`, `rombel`.`nama` as `nama_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`.*, `guru`.`nama` as `nama_guru`, `rombel`.`nama` as `nama_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `guru`.`nama` as `nama_guru`, `rombel`.`nama` as `nama_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SiswaModel.php(18): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SiswaController.php(12): App\Models\SiswaModel->getSiswa()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 18:02:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "siswa_view.php"
+[Method: GET, Route: siswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('siswa_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('siswa_view', [], true)
+ 3 APPPATH\Controllers\SiswaController.php(13): view('siswa_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 18:03:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "siswa_view.php"
+[Method: GET, Route: siswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('siswa_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('siswa_view', [], true)
+ 3 APPPATH\Controllers\SiswaController.php(13): view('siswa_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 18:03:33 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "siswa_view.php"
+[Method: GET, Route: siswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('siswa_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('siswa_view', [], true)
+ 3 APPPATH\Controllers\SiswaController.php(13): view('siswa_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 18:03:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "siswa_view.php"
+[Method: GET, Route: siswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('siswa_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('siswa_view', [], true)
+ 3 APPPATH\Controllers\SiswaController.php(13): view('siswa_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 18:03:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "siswa_view.php"
+[Method: GET, Route: siswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('siswa_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('siswa_view', [], true)
+ 3 APPPATH\Controllers\SiswaController.php(13): view('siswa_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 18:06:05 --> ErrorException: Undefined array key "id_siswa"
+[Method: GET, Route: siswa]
+in APPPATH\Views\SiswaView.php on line 17.
+ 1 APPPATH\Views\SiswaView.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_siswa"', 'C:\\laragon\\www\\sispendat\\app\\Views\\SiswaView.php', 17)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\sispendat\\app\\Views\\SiswaView.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('SiswaView', [], true)
+ 5 APPPATH\Controllers\SiswaController.php(13): view('SiswaView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 18:07:47 --> ErrorException: Undefined array key "n_guru"
+[Method: GET, Route: siswa]
+in APPPATH\Views\SiswaView.php on line 21.
+ 1 APPPATH\Views\SiswaView.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "n_guru"', 'C:\\laragon\\www\\sispendat\\app\\Views\\SiswaView.php', 21)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\sispendat\\app\\Views\\SiswaView.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('SiswaView', [], true)
+ 5 APPPATH\Controllers\SiswaController.php(13): view('SiswaView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 18:12:21 --> ErrorException: Undefined array key "n_guru"
+[Method: GET, Route: siswa]
+in APPPATH\Views\SiswaView.php on line 21.
+ 1 APPPATH\Views\SiswaView.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "n_guru"', 'C:\\laragon\\www\\sispendat\\app\\Views\\SiswaView.php', 21)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\sispendat\\app\\Views\\SiswaView.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('SiswaView', [], true)
+ 5 APPPATH\Controllers\SiswaController.php(13): view('SiswaView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-07 18:16:19 --> mysqli_sql_exception: Unknown column 'guru.nama' in 'field list' in C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `siswa`....', 0)
+#1 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`....')
+#2 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`....')
+#3 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`....', Array, false)
+#4 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\sispendat\app\Models\SiswaModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\sispendat\app\Controllers\SiswaController.php(12): App\Models\SiswaModel->getSiswa()
+#8 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+#9 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+#10 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\sispendat\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-10-07 18:16:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'guru.nama' in 'field list'
+[Method: GET, Route: siswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SiswaModel.php(18): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\SiswaController.php(12): App\Models\SiswaModel->getSiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 18:16:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'guru.nama' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SiswaModel.php(18): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\SiswaController.php(12): App\Models\SiswaModel->getSiswa()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 18:16:19 --> [Caused by] mysqli_sql_exception: Unknown column 'guru.nama' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SiswaModel.php(18): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SiswaController.php(12): App\Models\SiswaModel->getSiswa()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-07 18:25:15 --> mysqli_sql_exception: Unknown column 'guru.nama' in 'field list' in C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `siswa`....', 0)
+#1 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`....')
+#2 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`....')
+#3 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`....', Array, false)
+#4 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\sispendat\app\Models\SiswaModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\sispendat\app\Controllers\SiswaController.php(12): App\Models\SiswaModel->getSiswa()
+#8 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+#9 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+#10 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\sispendat\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\sispendat\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-10-07 18:25:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'guru.nama' in 'field list'
+[Method: GET, Route: siswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\SiswaModel.php(18): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\SiswaController.php(12): App\Models\SiswaModel->getSiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 18:25:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'guru.nama' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\SiswaModel.php(18): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\SiswaController.php(12): App\Models\SiswaModel->getSiswa()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 18:25:15 --> [Caused by] mysqli_sql_exception: Unknown column 'guru.nama' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `siswa`.*, `guru`.`nama` as `n_guru`, `rombel`.`nama` as `n_rombel`
+FROM `siswa`
+JOIN `guru` ON `siswa`.`id_guru` = `guru`.`id_guru`
+JOIN `rombel` ON `siswa`.`id_rombel` = `rombel`.`id_rombel`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\SiswaModel.php(18): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\SiswaController.php(12): App\Models\SiswaModel->getSiswa()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SiswaController->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SiswaController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
