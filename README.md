@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 # CodeIgniter 4 Application Starter
+=======
+# Judul proyek: 
+Sistem Informasi Pendataan Siswa SDN Pamanukan Sebrang I
+>>>>>>> b6cb51d3ba863e778ae871947c77c9b46d838518
 
 ## What is CodeIgniter?
 
