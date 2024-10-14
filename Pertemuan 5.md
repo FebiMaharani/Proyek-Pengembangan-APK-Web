@@ -18,18 +18,19 @@
 
 ### Tampilan Tabel Guru
 1. Read
-   ![image](https://github.com/user-attachments/assets/b0967608-4917-4d81-b938-12d84f19ff16)
+   ![image](https://github.com/user-attachments/assets/476b7b37-755a-4ca7-94f0-73d251e6416b)
 
 3. Create
-   ![image](https://github.com/user-attachments/assets/806475a3-7531-47cc-910b-0039f610f236)
+   ![image](https://github.com/user-attachments/assets/07d2e709-5363-48be-b79c-3694512bc11c)
    ![image](https://github.com/user-attachments/assets/b2a54f87-5f99-4aa0-bc0b-0bfe69bcf588)
 
 5. Update
-   ![image](https://github.com/user-attachments/assets/addc46a7-dfd4-46b7-be44-5af50e5b9e82)
+   ![image](https://github.com/user-attachments/assets/72979757-b19d-4b04-bdd6-d0c892b67437)
    ![image](https://github.com/user-attachments/assets/4e11d30a-11fa-4185-9e67-be67edea3e02)
 
 7. Delete
-   ![image](https://github.com/user-attachments/assets/5c5ff575-84d8-42f0-9dc2-96e6fd6fde7a)
+   ![image](https://github.com/user-attachments/assets/c8d00bc0-3476-4dd8-b8ed-7d677ff7f883)
+
    
 ### Tampilan Tabel Rombel
 1. Read
