@@ -33,6 +33,17 @@
    
 ### Tampilan Tabel Rombel
 1. Read
-2. Create
-3. Update
-4. Delete
+   ![image](https://github.com/user-attachments/assets/f56ee764-617d-4357-9e19-e8bf4489e79e)
+3. Create
+   ![image](https://github.com/user-attachments/assets/c383d8bf-c8d0-47e3-aa66-71bb200729f8)
+   output
+   ![image](https://github.com/user-attachments/assets/5460239c-aac8-42cd-a71b-93ec06b0bbf6)
+5. Update
+   ![image](https://github.com/user-attachments/assets/c9ffeb1e-bede-4a7c-862b-84ea9b9b4618)
+   output
+   ![image](https://github.com/user-attachments/assets/0576ab42-b029-497e-bd78-9712ac5d8cc9)
+7. Delete
+   ![image](https://github.com/user-attachments/assets/446577fb-59f2-4fb9-970f-d4efa9379f29)
+   output :
+   ![image](https://github.com/user-attachments/assets/3fcd4c66-dc24-4809-a88b-3ff95f330c98)
+
