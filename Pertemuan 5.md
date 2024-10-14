@@ -22,7 +22,7 @@
 
 3. Create
    ![image](https://github.com/user-attachments/assets/07d2e709-5363-48be-b79c-3694512bc11c)
-   ![image](https://github.com/user-attachments/assets/b2a54f87-5f99-4aa0-bc0b-0bfe69bcf588)
+   ![image](https://github.com/user-attachments/assets/a06fbafd-c47c-4219-b529-9323f574ef1f)
 
 5. Update
    ![image](https://github.com/user-attachments/assets/05098a83-7415-457f-a1da-dcc4be800eae)
