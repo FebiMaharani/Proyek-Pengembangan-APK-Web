@@ -25,8 +25,8 @@
    ![image](https://github.com/user-attachments/assets/b2a54f87-5f99-4aa0-bc0b-0bfe69bcf588)
 
 5. Update
-   ![image](https://github.com/user-attachments/assets/72979757-b19d-4b04-bdd6-d0c892b67437)
-   ![image](https://github.com/user-attachments/assets/4e11d30a-11fa-4185-9e67-be67edea3e02)
+   ![image](https://github.com/user-attachments/assets/05098a83-7415-457f-a1da-dcc4be800eae)
+   ![image](https://github.com/user-attachments/assets/29214597-41ba-4109-8d46-b91d46b99db0)
 
 7. Delete
    ![image](https://github.com/user-attachments/assets/c8d00bc0-3476-4dd8-b8ed-7d677ff7f883)
