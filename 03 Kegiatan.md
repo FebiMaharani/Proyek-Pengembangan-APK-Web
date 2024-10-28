@@ -1,5 +1,6 @@
 **Merancang Database**
-Docs: https://dbml.dbdiagram.io/docs
+
+Link : https://dbml.dbdiagram.io/docs
 
 Table siswa {
   nis integer [primary key]
