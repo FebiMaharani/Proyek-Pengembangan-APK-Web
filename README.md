@@ -4,47 +4,5 @@
 # Judul proyek: 
 Sistem Informasi Pendataan Siswa SDN Pamanukan Sebrang I
 
-# Tabel database
-![image](https://github.com/user-attachments/assets/f9e8be13-dade-4c17-a69b-b641d887381d)
-
 # Tabel data siswa
 ![WhatsApp Image 2024-10-08 at 01 36 10_d37c8efa](https://github.com/user-attachments/assets/fefb6662-105a-4bb2-88d9-9e0a91cbf08c)
-
-
-# Rancangan Input/Output
-**1. User**
-
-Input:
-- Permintaan untuk melihat profil sekolah
-- Permintaan untuk mengakses informasi sekolah (visi, misi, sejarah)
-- Permintaan untuk melihat dokumentasi kegiatan
-- Permintaan untuk mengakses informasi kontak sekolah
-
-Output:
-- Tampilan profil sekolah
-- Informasi sekolah (visi, misi, sejarah)
-- Dokumentasi kegiatan (gambar, video, deskripsi)
-- Informasi kontak sekolah (alamat, nomor telepon, email)
-
-**2. Admin**
-
-Input:
-- Menambah, mengedit, dan menghapus data siswa
-- Mengatur tampilan yang dapat dilihat oleh pengunjung
-- Mengelola kategori informasi yang ditampilkan
-- Mengatur pengumuman dan informasi penting
-
-Output:
-- Konfirmasi penambahan, pengeditan, atau penghapusan data siswa
-- Tampilan yang diatur sesuai dengan preferensi admin
-- Kategori informasi yang diperbarui
-- Pengumuman dan informasi penting yang ditampilkan kepada pengguna
-
-# Input/Output Admin :
-![Screenshot 2024-09-30 225631](https://github.com/user-attachments/assets/4253ac28-122c-402c-bc34-55787673edbf)
-
-# Output User :
-![image](https://github.com/user-attachments/assets/1fd18d18-f604-4034-9e81-be3a0875105d) 
-
-
-
