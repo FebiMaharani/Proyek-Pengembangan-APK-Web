@@ -31,6 +31,10 @@ Table guru {
   status varchar
 }
 
+Ref: rombel.id_rombel > siswa.id_rombel 
+
+Ref: guru.id_guru < siswa.id_guru
+
 ## Diagram Data Base
 ![image](https://github.com/user-attachments/assets/6a642930-28e5-4584-a521-a76ddabf9822)
 
@@ -57,8 +61,3 @@ Table guru {
 ## UI/UX (Admin)
 ![image](https://github.com/user-attachments/assets/c8e80f8c-fcf7-4945-ab11-25f3ed88b446)
 
-
-
-Ref: rombel.id_rombel > siswa.id_rombel 
-
-Ref: guru.id_guru < siswa.id_guru
