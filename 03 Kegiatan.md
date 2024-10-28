@@ -1,4 +1,4 @@
-**Merancang Database**
+# Merancang Database
 
 Link : https://dbml.dbdiagram.io/docs
 
