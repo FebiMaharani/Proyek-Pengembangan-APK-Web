@@ -9,6 +9,7 @@ Sistem Informasi Pendataan SDN Pamanukan Sebrang I.
 |Admin |Menambah, mengedit, dan menghapus data siswa, Mengatur tampilan yang dapat dilihat oleh pengunjung,Mengelola kategori informasi yang ditampilkan, Mengatur pengumuman dan informasi penting.| Antarmuka untuk manajemen data yang efisien, Fitur untuk menyimpan perubahan tampilan yang diatur. |Sistem dapat digunakan secara efisien dengan satu akun admin, Monitoring kinerja sistem untuk optimasi. |Login untuk admin dengan otentikasi yang kuat, Backup data secara berkala.|
 
 **Fitur aplikasi web dari sisi user dan admin**
+
 Dalam pengembangan aplikasi web, fitur fitur yang disediakan sangat penting untuk memenuhi kebutuhan baik user maupun admin.
 
 1. Fitur aplikasi web dari sisi user
