@@ -16,4 +16,4 @@ Rancangan jumlah table yang ada pada projek yang kami buat ada 4, yaitu : Siswa,
 - Kegiatan ke 9 (19-25 Nov 2024) -> Membuat tampilan admin
 - Kegiatan ke 10 (26-2 Nov 2024) -> Membuat tampilan user
 - Kegiatan ke 11 (3-9 Des 2024) -> Finalisasi tampilan web
-- Kegiatan ke 12 (10-16 NDes 2024) -> Finalisasi projek 
+- Kegiatan ke 12 (10-16 Des 2024) -> Finalisasi projek 
