@@ -10,3 +10,8 @@ Sistem Informasi Pendataan SDN Pamanukan Sebrang I.
 ## 3. Rencana Jumlah Tabel
 
 ## 4. Rencana Kegiatan
+- Kegiatan ke 8 (12-18 Nov 2024) -> Input data yang dibutuhkan
+- Kegiatan ke 9 (19-25 Nov 2024) -> Membuat tampilan admin
+- Kegiatan ke 10 (26-2 Nov 2024) -> Membuat tampilan user
+- Kegiatan ke 11 (3-9 Des 2024) -> Finalisasi tampilan user
+- Kegiatan ke 12 (10-16 NDes 2024) Finalisasi projek 
