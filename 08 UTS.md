@@ -1,4 +1,5 @@
 ## 1. Judul/Topik
+Sistem Informasi Pendataan SDN Pamanukan Sebrang I.
 ## 2. Fitur Aplikasi dari sisi User dan Admin 
 
 |     |          Fungsionalitas         |     Antarmuka Pengguna      |         Kinerja        |           Keamanan         |
@@ -7,4 +8,5 @@
 |Admin |Menambah, mengedit, dan menghapus data siswa, Mengatur tampilan yang dapat dilihat oleh pengunjung,Mengelola kategori informasi yang ditampilkan, Mengatur pengumuman dan informasi penting.| Antarmuka untuk manajemen data yang efisien, Fitur untuk menyimpan perubahan tampilan yang diatur. |Sistem dapat digunakan secara efisien dengan satu akun admin, Monitoring kinerja sistem untuk optimasi. |Login untuk admin dengan otentikasi yang kuat, Backup data secara berkala.|
 
 ## 3. Rencana Jumlah Tabel
+
 ## 4. Rencana Kegiatan
