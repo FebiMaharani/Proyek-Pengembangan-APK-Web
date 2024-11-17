@@ -1,1 +1,102 @@
 
+// Controller/Guru.php
+<?php
+
+namespace App\Controllers;
+
+use App\Models\GuruModel;
+use CodeIgniter\Controller;
+
+class Guru extends Controller
+{
+    public function index()
+    {
+        $model = new GuruModel();
+        $data['gurus'] = $model->findAll();
+        $header = view('layout/header');
+        $content = view('guru/index', $data);
+        $footer = view('layout/footer');
+    
+        return $header . $content . $footer;
+        // return view('guru/index', $data);
+    }
+
+    public function create()
+    {
+        $header = view('layout/header');
+        $content = view('guru/create');
+        $footer = view('layout/footer');
+    
+        return $header . $content . $footer;
+    }
+
+    public function store()
+    {
+        $model = new GuruModel();
+        $data = [
+            'n_guru' => $this->request->getVar('n_guru'),
+            'gjekel' => $this->request->getVar('gjekel'),
+            'status' => $this->request->getVar('status'),
+        ];
+        $model->insert($data);
+        return redirect()->to('/guru');
+    }
+
+    public function edit($id)
+    {
+        $model = new GuruModel();
+        $data['guru'] = $model->find($id);
+        $header = view('layout/header');
+        $content = view('guru/edit', $data);
+        $footer = view('layout/footer');
+    
+        return $header . $content . $footer;
+        // return view('guru/edit', $data);
+    }
+
+    public function update($id)
+    {
+        $model = new GuruModel();
+        $data = [
+            'n_guru' => $this->request->getVar('n_guru'),
+            'gjekel' => $this->request->getVar('gjekel'),
+            'status' => $this->request->getVar('status'),
+        ];
+        $model->update($id, $data);
+        return redirect()->to('/guru');
+    }
+
+    public function delete($id)
+    {
+        $model = new GuruModel();
+        $model->delete($id);
+        return redirect()->to('/guru');
+    }
+
+}
+
+
+// Models/ModelGuru.php
+<?php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class GuruModel extends Model
+{
+    protected $table = 'guru';
+    protected $primaryKey = 'id_guru';
+    protected $allowedFields = ['n_guru', 'gjekel', 'status'];
+
+}
+
+
+// Config/Routes.php
+
+$routes->get('guru', 'Guru::index');
+$routes->get('guru/create', 'Guru::create');
+$routes->post('guru/store', 'Guru::store');
+$routes->get('guru/edit/(:num)', 'Guru::edit/$1');
+$routes->post('guru/update/(:num)', 'Guru::update/$1');
+$routes->get('guru/delete/(:num)', 'Guru::delete/$1');
