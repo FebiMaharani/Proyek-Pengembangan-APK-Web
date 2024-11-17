@@ -100,3 +100,133 @@ $routes->post('guru/store', 'Guru::store');
 $routes->get('guru/edit/(:num)', 'Guru::edit/$1');
 $routes->post('guru/update/(:num)', 'Guru::update/$1');
 $routes->get('guru/delete/(:num)', 'Guru::delete/$1');
+
+// Views/guru/index.php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Guru</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Daftar Guru</h1>
+        <a href="<?= base_url('guru/create') ?>" class="btn btn-success">Tambah Guru Baru</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama Guru</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($gurus as $guru): ?>
+                <tr>
+                    <td><?= $guru['id_guru'] ?></td>
+                    <td><?= $guru['n_guru'] ?></td>
+                    <td><?= $guru['gjekel'] ?></td>
+                    <td><?= $guru['status'] ?></td>
+                    <td>
+                        <a href="<?= base_url('guru/edit/'.$guru['id_guru']) ?>" class="btn btn-sm btn-primary">Edit</a>
+                        <a href="<?= base_url('guru/delete/'.$guru['id_guru']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+       
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+// Views/guru/form.php
+
+<div class="form-group">
+    <label for="n_guru">Nama Guru</label>
+    <input type="text" class="form-control" id="n_guru" name="n_guru" value="<?= isset($guru['n_guru']) ? $guru['n_guru'] : '' ?>" required>
+</div>
+<div class="form-group">
+    <label for="gjekel">Jenis Kelamin:</label>
+    <select name="gjekel" id="gjekel" class="form-control" required>
+        <option value="">Pilih Jenis Kelamin</option>
+        <option value="L" <?= (isset($guru['gjekel']) && $guru['gjekel'] == 'L') ? 'selected' : '' ?>>Laki-laki</option>
+        <option value="P" <?= (isset($guru['gjekel']) && $guru['gjekel'] == 'P') ? 'selected' : '' ?>>Perempuan</option>
+    </select>
+</div>
+<div class="form-group">
+    <label for="status">Status:</label>
+    <select name="status" id="status" class="form-control" required>
+        <option value="">Pilih Status</option>
+        <option value="Aktif" <?= (isset($guru['status']) && $guru['status'] == 'Aktif') ? 'selected' : '' ?>>Aktif</option>
+        <option value="Tidak Aktif" <?= (isset($guru['status']) && $guru['status'] == 'Tidak Aktif') ? 'selected' : '' ?>>Tidak Aktif</option>
+    </select>
+</div>
+
+// View/guru/edit.php
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Guru</title>
+    <!-- Tambahkan Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    
+    <!-- Tambahkan custom CSS jika diperlukan -->
+    <style>
+        body {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Edit Guru</h1>
+        <form action="<?= site_url('guru/update/'.$guru['id_guru']) ?>" method="post">
+            <?= $this->include('guru/form') ?>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+
+    </div>
+</body>
+</html>
+
+// Views/guru/create.php
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Guru Baru</title>
+    <!-- Tambahkan Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Tambah Guru Baru</h1>
+        <form action="<?= site_url('guru/store') ?>" method="post">
+            <?= $this->include('guru/form') ?>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+        </form>
+        <a href="<?= site_url('guru') ?>" class="btn btn-secondary mt-3">Kembali ke Daftar</a>
+    </div>
+
+    <!-- Tambahkan Bootstrap JS dan dependencies (opsional, jika Anda memerlukan fitur Bootstrap yang membutuhkan JavaScript) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
