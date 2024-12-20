@@ -1,0 +1,69 @@
+// UserModel.php
+
+<?php
+namespace App\Models;
+use CodeIgniter\Model;
+class UserModel extends Model
+{
+    protected $table = 'pengguna';
+    protected $primaryKey = 'id';
+    protected $allowedFields = ['username', 'password', 'email', 'akses']; // Tambahkan 'akses' di sini
+    protected $useTimestamps = true;
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
+    protected $beforeInsert = ['hashPassword'];
+    protected $beforeUpdate = ['hashPassword'];
+    protected function hashPassword(array $data)
+    {
+        if (isset($data['data']['password'])) {
+            $data['data']['password'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
+        }
+        return $data;
+    }
+    public function findUserByUsername($username)
+    {
+        return $this->where('username', $username)->first();
+    }
+}
+
+// GuruModel.php
+<?php
+namespace App\Models;
+use CodeIgniter\Model;
+class GuruModel extends Model
+{
+    protected $table = 'guru';
+    protected $primaryKey = 'id_guru';
+    protected $allowedFields = ['n_guru', 'gjekel', 'status'];
+
+}
+
+RombelModel.php
+<?php
+namespace App\Models;
+use CodeIgniter\Model;
+class RombelModel extends Model
+{
+    protected $table = 'rombel';
+    protected $primaryKey = 'id_rombel';
+    protected $allowedFields = ['n_rombel', 'tingkat'];
+    public function getRombel()
+    {
+        return $this->findAll();
+    }
+}
+
+// SiswaModel.php
+<?php
+namespace App\Models;
+use CodeIgniter\Model;
+class SiswaModel extends Model
+{
+    protected $table = 'siswa';
+    protected $primaryKey = 'nis';
+    protected $allowedFields = ['nsiswa','sjekel' ,'tingkat', 'id_rombel', 'id_guru'];
+    public function getSiswa(){
+    return $this->select('siswa.*, rombel.tingkat, rombel.n_rombel, guru.n_guru')
+        ->join('rombel', 'siswa.id_rombel = rombel.id_rombel')
+        ->join('guru', 'siswa.id_guru = guru.id_guru')
+        ->findAll();}}
