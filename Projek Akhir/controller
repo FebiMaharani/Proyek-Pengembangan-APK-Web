@@ -1,1 +1,287 @@
+// Home.php
 
+<?php
+namespace App\Controllers;
+class Home extends BaseController
+{
+    public function index(): string
+    {       
+        $header = view('layout/header');
+        $content = view('home');
+        $footer = view('layout/footer');
+        return $header . $content . $footer;
+    }
+    public function profile()
+    {
+        $header = view('layout/header');
+        $content = view('profile');
+        $footer = view('layout/footer');
+        return $header . $content . $footer;
+        // return view('profile');
+    }
+    public function information()
+    {
+        return view('information');
+    }
+    public function siswa()
+    {
+        $siswaModel = new \App\Models\SiswaModel();
+        // Fetch the data
+        $data['siswa'] = $siswaModel->findAll();
+    
+        // Pass the data to the view
+        return view('siswa/index', $data);
+    }
+    public function guru()
+    {
+        return view('guru/index');
+    }
+    public function rombel()
+    {
+        return view('rombel/index');
+    }
+}
+
+// Guru.php
+
+<?php
+namespace App\Controllers;
+use App\Models\GuruModel;
+use CodeIgniter\Controller;
+class Guru extends Controller
+{
+    public function index()
+    {
+        $model = new GuruModel();
+        $data['gurus'] = $model->findAll();
+        $header = view('layout/header');
+        $content = view('guru/index', $data);
+        $footer = view('layout/footer');
+        return $header . $content . $footer;
+    }
+    public function create()
+    {
+        $header = view('layout/header');
+        $content = view('guru/create');
+        $footer = view('layout/footer');
+        return $header . $content . $footer;
+    }
+
+ public function store()
+    {
+        $model = new GuruModel();
+        $data = [
+            'n_guru' => $this->request->getVar('n_guru'),
+            'gjekel' => $this->request->getVar('gjekel'),
+            'status' => $this->request->getVar('status'),
+        ];
+        $model->insert($data);
+        return redirect()->to('/guru');
+    }
+    public function edit($id)
+    {
+        $model = new GuruModel();
+        $data['guru'] = $model->find($id);
+        $header = view('layout/header');
+        $content = view('guru/edit', $data);
+        $footer = view('layout/footer');
+        return $header . $content . $footer;
+    }
+    public function update($id)
+    {
+        $model = new GuruModel();
+        $data = [
+            'n_guru' => $this->request->getVar('n_guru'),
+            'gjekel' => $this->request->getVar('gjekel'),
+            'status' => $this->request->getVar('status'),
+        ];
+        $model->update($id, $data);
+        return redirect()->to('/guru');
+    }
+    public function delete($id)
+    {
+        $model = new GuruModel();
+        $model->delete($id);
+        return redirect()->to('/guru');
+    }
+}
+
+// Rombel.php
+
+<?php
+
+namespace App\Controllers;
+use App\Models\RombelModel;
+class Rombel extends BaseController
+{
+    protected $rombelModel;
+    public function __construct()
+    {
+        $this->rombelModel = new RombelModel();
+    }
+    public function index()
+    {
+        $data['rombel'] = $this->rombelModel->getRombel();
+        $header = view('layout/header');
+        $content = view('rombel/index', $data);
+        $footer = view('layout/footer');
+        return $header . $content . $footer;
+    }
+   public function create()
+    {
+        $header = view('layout/header');
+        $content = view('rombel/create');
+        $footer = view('layout/footer');
+        return $header . $content . $footer;
+    }
+    public function store()
+    {
+        $model = new RombelModel();
+        $data = [
+	'n_rombel' => $this->request->getVar('n_rombel'),
+
+'tingkat' => $this->request->getVar('tingkat'),
+        ];
+        $model->insert($data);
+        return redirect()->to('/rombel');
+    }
+    public function edit($id)
+    {
+        $model = new RombelModel();
+        $data['rombel'] = $model->find($id);
+        $header = view('layout/header');
+        $content = view('rombel/edit', $data);
+        $footer = view('layout/footer');
+        return $header . $content . $footer;
+    }
+    public function update($id)
+    {
+        $model = new RombelModel();
+        $data = [
+            'n_rombel' => $this->request->getVar('n_rombel'),
+            'tingkat' => $this->request->getVar('tingkat'),
+        ];
+        $model->update($id, $data);
+        return redirect()->to('/rombel');
+    }
+    public function delete($id)
+    {
+        $model = new RombelModel();
+        $model->delete($id);
+        return redirect()->to('/rombel');
+    }
+}
+
+// Siswa.php
+
+<?php
+namespace App\Controllers;
+use App\Controllers\BaseController;
+use App\Models\SiswaModel;
+use App\Models\GuruModel;
+use App\Models\RombelModel;
+use CodeIgniter\Controller;
+class Siswa extends Controller
+{
+    public function index()
+    {
+        $siswaModel = new SiswaModel();
+        $guruModel = new GuruModel();
+        $rombelModel = new RombelModel();
+        $siswa = $siswaModel->select('siswa.*, guru.n_guru, rombel.tingkat, rombel.n_rombel')
+                            ->join('guru', 'guru.id_guru = siswa.id_guru')
+                            ->join('rombel', 'rombel.id_rombel = siswa.id_rombel')
+                            ->findAll();
+        $header = view('layout/header');
+        $content = view('siswa/index', ['siswa' => $siswa]);
+        $footer = view('layout/footer');
+        return $header . $content . $footer;
+    }
+public function create()
+    {
+        $guruModel = new GuruModel();
+        $rombelModel = new RombelModel();
+        $data['gurus'] = $guruModel->findAll();
+        $data['rombels'] = $rombelModel->findAll();    
+        $header = view('layout/header');
+        $content = view('siswa/create', $data);
+        $footer = view('layout/footer');    
+        return $header . $content . $footer;
+    }
+public function store()
+    {
+        $siswaModel = new SiswaModel();
+        $guruModel = new GuruModel();
+
+$rombelModel = new RombelModel();
+        $n_guru = $this->request->getVar('n_guru');
+        $n_rombel = $this->request->getVar('n_rombel');
+        $guru = $guruModel->where('n_guru', $n_guru)->first();
+        $rombel = $rombelModel->where('n_rombel', $n_rombel)->first();
+        if (!$guru || !$rombel) {
+            return redirect()->back()->with('error', 'Guru atau Rombel tidak ditemukan');
+        }
+        $data = [
+            'nsiswa' => $this->request->getVar('nsiswa'),
+            'sjekel' => $this->request->getVar('sjekel'),
+            'id_guru' => $guru['id_guru'],
+            'id_rombel' => $rombel['id_rombel'],
+        ];
+        $siswaModel->insert($data);
+        return redirect()->to('/siswa');
+    }
+    public function edit($id)
+    {
+        $siswaModel = new SiswaModel();
+        $guruModel = new GuruModel();
+        $rombelModel = new RombelModel();
+        $siswa = $siswaModel->select('siswa.*, guru.n_guru, rombel.tingkat, rombel.n_rombel')
+                            ->join('guru', 'guru.id_guru = siswa.id_guru')
+                            ->join('rombel', 'rombel.id_rombel = siswa.id_rombel')
+                            ->find($id);
+        $data['gurus'] = $guruModel->findAll();
+        $data['rombels'] = $rombelModel->findAll();
+        $data['siswa'] = $siswa;
+        $data['header'] = view('layout/header');
+        $data['content'] = view('siswa/edit', $data);
+        $data['footer'] = view('layout/footer');
+        return $data['header'] . $data['content'] . $data['footer'];
+    }
+    public function update($id)
+    {
+        $siswaModel = new SiswaModel();
+        $guruModel = new GuruModel();
+        $rombelModel = new RombelModel();
+        $n_guru = $this->request->getVar('n_guru');
+        $n_rombel = $this->request->getVar('n_rombel');
+        $guru = $guruModel->where('n_guru', $n_guru)->first();
+        $rombel = $rombelModel->where('n_rombel', $n_rombel)->first();
+        if (!$guru || !$rombel) {
+            return redirect()->back()->with('error', 'Guru atau Rombel tidak ditemukan');
+        }
+        $data = [
+            'nsiswa' => $this->request->getVar('nsiswa'),
+            'sjekel' => $this->request->getVar('sjekel'),
+            'id_guru' => $guru['id_guru'],
+            'id_rombel' => $rombel['id_rombel'],
+        ];
+        $siswaModel->update($id, $data);
+        return redirect()->to('/siswa');
+    }
+    public function delete($id)
+    {
+        $siswaModel = new SiswaModel();
+        $siswaModel->delete($id);
+        return redirect()->to('/siswa');
+    }
+    public function cobasiswa()
+    {
+        $this->siswaModel = new SiswaModel();
+        $data['siswa'] = $this->siswaModel->getSiswa();
+        $header = view('layout/header');
+        $content = view('siswa/cobasiswa', $data);
+        $footer = view('layout/footer');
+    
+        return $header . $content . $footer;
+    }
+}
