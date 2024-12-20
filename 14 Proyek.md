@@ -136,13 +136,13 @@ Sistem ini dikembangkan menggunakan **CodeIgniter** yang:
 ## 3. Implementasi
 
 ### a. Model
-https://github.com/ellindaa/praktikum-pemrograman-berbasis-mobile/blob/main/Percobaan/model
+https://github.com/FebiMaharani/Proyek-Pengembangan-APK-Web/blob/main/Projek%20Akhir/model
 
 ### b. View
-https://github.com/ellindaa/praktikum-pemrograman-berbasis-mobile/blob/main/Percobaan/view
+https://github.com/FebiMaharani/Proyek-Pengembangan-APK-Web/blob/main/Projek%20Akhir/view
 
 ### c. Controller
-https://github.com/ellindaa/praktikum-pemrograman-berbasis-mobile/blob/main/Percobaan/controller
+https://github.com/FebiMaharani/Proyek-Pengembangan-APK-Web/blob/main/Projek%20Akhir/controller
 
 ---
 
