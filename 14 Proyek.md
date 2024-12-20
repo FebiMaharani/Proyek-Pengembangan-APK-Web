@@ -221,6 +221,6 @@ Dengan sistem ini, sekolah dapat meningkatkan kualitas layanan administrasi di e
 5. Peningkatan keamanan data.
 
 ### Link PDF
-https://github.com/FebiMaharani/Proyek-Pengembangan-APK-Web/blob/main/Laporan%20PPAW%20Robusta.pdf
+https://github.com/FebiMaharani/Proyek-Pengembangan-APK-Web/blob/main/Projek%20Akhir/Laporan%20PPAW%20Robusta.pdf
 
 
